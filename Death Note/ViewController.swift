@@ -3,9 +3,11 @@
 //  Death Note
 //
 //  Created by Efekan Güvendik on 6.02.2024.
-//
+
+///Buton işlevi diğer sayfa, coredata ya safe ve collections view .
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -35,6 +37,7 @@ class ViewController: UIViewController {
         addButton.center = CGPoint(x: 385, y: 800)
         addButton.setImage(addImage, for: .normal)
         addButton.tintColor = .black
+        addButton.addTarget(self, action: #selector(goToSecVV) , for: .touchUpInside) //Self: kendisie  işlem atandı actions
         
         
         /// ADD TO VİEW-------------
