@@ -37,15 +37,21 @@ class ViewController: UIViewController {
         addButton.center = CGPoint(x: 385, y: 800)
         addButton.setImage(addImage, for: .normal)
         addButton.tintColor = .black
-        addButton.addTarget(self, action: #selector(goToSecVV) , for: .touchUpInside) //Self: kendisie  işlem atandı actions
-        
+        addButton.addTarget(self, action: #selector(goToSecVC) , for: .touchUpInside) //Self: kendisine   işlem atandı actions #selector: Target yapımında @object func'dan tanım için kullanırız.
+
         
         /// ADD TO VİEW-------------
         self.view.addSubview(baslikLabel)
         self.view.addSubview(addButton)
         
     }
-
-
+    
+    @objc func goToSecVC(){
+        
+        let secVC = secViewController()
+        let naviController = UINavigationController(rootViewController: secVC)
+        self.navigationController?.pushViewController(secVC, animated: true)
+    }
+    
 }
 
