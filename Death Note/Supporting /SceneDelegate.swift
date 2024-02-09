@@ -18,10 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let window = UIWindow(windowScene: windowScene) // Burda Main storyBoardı sildikden sora bir ekran yaratıyoruz.
-        window.rootViewController = ViewController()
-        self.window = window                             // Bir işlemin sonuda nokte "." olması o parametrenin bir özellik biçimi veya onun yönetim biçimi atanmasını söyler.
-        window.makeKeyAndVisible()                      // Burda Sistem için oluşturulan ekranı görünür kılıyoruz.
+        let window = UIWindow(windowScene: windowScene)     // Burda Main storyBoardı sildikden sora bir ekran yaratıyoruz.
+        window.rootViewController = UINavigationController(rootViewController: ViewController())
+        self.window = window                                // Bir işlemin sonuda nokte "." olması o parametrenin bir özellik biçimi veya onun yönetim biçimi atanmasını söyler.
+        window.makeKeyAndVisible()                          //  Burda Sistem için oluşturulan ekranı görünür kılıyoruz.
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
