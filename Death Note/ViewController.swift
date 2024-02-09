@@ -45,12 +45,12 @@ class ViewController: UIViewController {
         self.view.addSubview(addButton)
         
     }
-    
-    @objc func goToSecVC(){
+    @objc func goToSecVC() {
+        let secViewController = secViewController()
+        navigationController?.pushViewController(secViewController, animated: true)
+   
         
-        let secVC = secViewController()
-        let naviController = UINavigationController(rootViewController: secVC)
-        self.navigationController?.pushViewController(secVC, animated: true)
+       
     }
     
 }

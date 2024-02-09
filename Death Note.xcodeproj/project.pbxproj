@@ -13,7 +13,7 @@
 		AB9E0BAE2B728D68009C10E2 /* Death_Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB9E0BAC2B728D68009C10E2 /* Death_Note.xcdatamodeld */; };
 		AB9E0BB02B728D69009C10E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB9E0BAF2B728D69009C10E2 /* Assets.xcassets */; };
 		AB9E0BB32B728D69009C10E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB9E0BB12B728D69009C10E2 /* LaunchScreen.storyboard */; };
-		ABE696C42B75186F0024FD15 /* secViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE696C32B75186F0024FD15 /* secViewController.swift */; };
+		ABF847822B75D4BE00BF1C92 /* secViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF847812B75D4BD00BF1C92 /* secViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		AB9E0BAF2B728D69009C10E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB9E0BB22B728D69009C10E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB9E0BB42B728D69009C10E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ABE696C32B75186F0024FD15 /* secViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secViewController.swift; sourceTree = "<group>"; };
+		ABF847812B75D4BD00BF1C92 /* secViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				AB9E0BA72B728D68009C10E2 /* ViewController.swift */,
-				ABE696C32B75186F0024FD15 /* secViewController.swift */,
+				ABF847812B75D4BD00BF1C92 /* secViewController.swift */,
 				ABE696C22B7517E30024FD15 /* Supporting  */,
 				AB9E0BB12B728D69009C10E2 /* LaunchScreen.storyboard */,
 				AB9E0BB42B728D69009C10E2 /* Info.plist */,
@@ -151,7 +151,7 @@
 				AB9E0BA82B728D68009C10E2 /* ViewController.swift in Sources */,
 				AB9E0BA42B728D68009C10E2 /* AppDelegate.swift in Sources */,
 				AB9E0BAE2B728D68009C10E2 /* Death_Note.xcdatamodeld in Sources */,
-				ABE696C42B75186F0024FD15 /* secViewController.swift in Sources */,
+				ABF847822B75D4BE00BF1C92 /* secViewController.swift in Sources */,
 				AB9E0BA62B728D68009C10E2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
