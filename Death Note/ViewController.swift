@@ -37,21 +37,23 @@ class ViewController: UIViewController {
         addButton.center = CGPoint(x: 385, y: 800)
         addButton.setImage(addImage, for: .normal)
         addButton.tintColor = .systemGray4
-        addButton.addTarget(self, action: #selector(didTapButton) , for: .touchUpInside) //Self: kendisine   işlem atandı actions #selector: Target yapımında @object func'dan tanım için kullanırız.
-
+        addButton.addTarget(self, action: #selector(didTapButton) , for: .touchUpInside) //Self: kendisine işlem atandı actions #selector: Target yapımında @object func'dan tanım için kullanırız.
+        
+        title = "Home"                                                                   //NavigationsController'ın button adı. 
+        navigationController?.navigationBar.tintColor = .systemGray4                     //Burda navigationContoller'ın oluşturduğu butonun rengini değiştirdi.
         
         /// ADD TO VİEW-------------
         self.view.addSubview(baslikLabel)
         self.view.addSubview(addButton)
-        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        
     }
      
     
     @objc func didTapButton() {
-        let secVC = SecondViewController()
-        navigationController?.pushViewController(secVC, animated: true)
-   
-        
+        let secVC = SecondViewController()                                               //Burda #selector için çağırlması gereken func'ı oluşturduk.
+        navigationController?.pushViewController(secVC, animated: true)                  //navigationController : Bu terim pageler arası kontrol için gerekli üst button olumunu yapar.
+                                                                                         //pushViewController : BU ifade adından da anlaşılacağı gibi diğer sayfaya atmaya sebep olan kod dizimidir.
        
     }
     
