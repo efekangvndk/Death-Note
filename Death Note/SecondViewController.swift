@@ -27,7 +27,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         note.backgroundColor = .white
         note.font = UIFont(name: "Helvetica", size: 15)
         note.leftViewMode = .always
-        note.frame = CGRect(x: 0, y: 0, width: 300 , height: 35)
+        note.frame = CGRect(x: 0, y: 0, width: 300 , height: 34)
         note.center = CGPoint(x: view.frame.width / 2, y: 150)
         note.layer.cornerRadius = 20
         note.layer.borderWidth = 1.0
