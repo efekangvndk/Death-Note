@@ -30,10 +30,10 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         note.frame = CGRect(x: 0, y: 0, width: 300 , height: 35)
         note.center = CGPoint(x: view.frame.width / 2, y: 150)
         note.layer.cornerRadius = 20
-        note.layer.borderWidth = 1.0
+        note.layer.borderWidth = 1.1
         note.layer.borderColor = UIColor.systemRed.cgColor
         note.layer.shadowColor = UIColor.black.cgColor
-        note.layer.shadowOpacity = 2.99
+        note.layer.shadowOpacity = 3.00
         note.layer.shadowOffset = CGSize(width: 1, height: 2)
         note.layer.shadowRadius = 10
         note.delegate = self
