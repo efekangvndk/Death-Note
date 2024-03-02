@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .black
+        self.view.backgroundColor = .darkGray
         
         /// VARS------------------
         let baslikLabel = UILabel()
@@ -25,9 +25,11 @@ class ViewController: UIViewController {
         baslikLabel.text = "DEATH NOTE"
         baslikLabel.textAlignment = .center
         baslikLabel.font = UIFont.systemFont(ofSize: 35)
-        baslikLabel.frame = CGRect(x: 100 , y:100, width: 300, height: 300)
-        baslikLabel.center = CGPoint(x: view.frame.size.width / 2, y: 100)
-        baslikLabel.textColor = .systemGray4
+        baslikLabel.frame = CGRect(x: 0 , y:0, width: 300, height: 150)
+        baslikLabel.center = CGPoint(x: view.frame.size.width / 2, y: 130)
+        baslikLabel.textColor = .white
+        baslikLabel.layer.shadowRadius = 10
+        baslikLabel.layer.shadowColor = UIColor.white.cgColor
         
         
         /// OTHERS SETTİNGS--------
