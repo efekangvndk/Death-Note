@@ -28,7 +28,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate , UITextViewDe
         note.text = "WHO WİLL KİLL BE"
         note.textContainerInset = UIEdgeInsets(top: 8, left: 50, bottom: 8, right: 8)
         note.textColor = UIColor.lightGray
-        note.backgroundColor = .white
+        note.backgroundColor = .systemGray2
         note.font = UIFont(name: "Helvetica", size: 15)
         note.layer.cornerRadius = 20
         note.layer.borderWidth = 1.0
