@@ -11,12 +11,13 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
        
     
     /// VARS------------------
-    var note = UITextField()
+    var note = UITextField()                                                                //oluşturulan değişkenler
     let baslikLabel2 = UILabel()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.view.backgroundColor = .systemGray5
         
         /// LABEL SETTİNGS-------
@@ -26,18 +27,12 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         /// TEXTFİELD SETTİNGS---
         note.backgroundColor = .white
         note.font = UIFont(name: "Helvetica", size: 15)
-        note.leftViewMode = .always
-        note.frame = CGRect(x: 0, y: 0, width: 300 , height: 35)
-        note.center = CGPoint(x: view.frame.width / 2, y: 150)
         note.layer.cornerRadius = 20
-        note.layer.borderWidth = 1.0
-        note.layer.borderColor = UIColor.systemRed.cgColor
-        note.layer.shadowColor = UIColor.black.cgColor
-        note.layer.shadowOpacity = 3.00
-        note.layer.shadowOffset = CGSize(width: 1, height: 2)
-        note.layer.shadowRadius = 10
-        note.delegate = self
-    
+        note.layer
+        
+            NSLayoutConstraint.activate([
+                
+                ])
         
         /// ADD TO VİEW-----------
         self.view.addSubview(note)
