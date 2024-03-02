@@ -27,7 +27,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate , UITextViewDe
         /// TEXTFİELD SETTİNGS---
         note.text = "WHO WİLL KİLL BE"
         note.textContainerInset = UIEdgeInsets(top: 8, left: 50, bottom: 8, right: 8)
-        note.textColor = UIColor.lightGray
+        note.textColor = UIColor.systemGray5
         note.backgroundColor = .systemGray5
         note.font = UIFont(name: "Helvetica", size: 15)
         note.layer.cornerRadius = 20
@@ -80,7 +80,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate , UITextViewDe
     
     // Büyüme animasyon ekleniyor.
     func textViewDidBeginEditing(_ textView: UITextView){
-        if note.textColor == UIColor.lightGray {
+        if note.textColor == UIColor.systemGray5 {
             note.text = nil
             note.textColor = UIColor.black
         }
@@ -93,7 +93,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate , UITextViewDe
     func textViewDidEndEditing(_ textView : UITextView) {
         if note.text.isEmpty {
             note.text = "WHO WİLL KİLL BE"
-            note.textColor = UIColor.lightGray
+            note.textColor = UIColor.systemGray5
         }
            UIView.animate(withDuration: 1.0, animations: {
                textView.transform = CGAffineTransform.identity    // Normal boyua geri dönüş.
