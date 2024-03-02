@@ -28,7 +28,8 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         note.backgroundColor = .white
         note.font = UIFont(name: "Helvetica", size: 15)
         note.layer.cornerRadius = 20
-        note.layer
+        note.layer.borderWidth = 1.0
+        note.layer.borderColor = UIColor.systemRed.cgColor
         
             NSLayoutConstraint.activate([
                 
