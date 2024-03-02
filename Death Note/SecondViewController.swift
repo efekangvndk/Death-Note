@@ -44,7 +44,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate , UITextViewDe
         saveButton.setTitle("SAVE", for: .normal)
         saveButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
         saveButton.tintColor = UIColor.red
-        saveButton.layer.borderWidth = 1.8
+        saveButton.layer.borderWidth = 2
         saveButton.layer.cornerRadius = 10
         saveButton.translatesAutoresizingMaskIntoConstraints = false                        // Düzgün çalışması için yapılan bir method
         self.view.addSubview(saveButton)
