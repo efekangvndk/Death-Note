@@ -18,7 +18,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate , UITextViewDe
         
         /// LABEL SETTİNGS-------
         baslikLabel2.text = "RULES"
-        baslikLabel2.textColor = .darkGray
+        baslikLabel2.textColor = .black
         self.view.addSubview(baslikLabel2)
         baslikLabel2.frame = CGRect(x: 0 , y: 0, width: 70, height: 50)
         baslikLabel2.center = CGPoint(x: view.frame.size.width / 2, y: 100)
