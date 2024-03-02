@@ -14,7 +14,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate , UITextViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .systemGray5
+        self.view.backgroundColor = .darkGray
         
         /// LABEL SETTİNGS-------
         baslikLabel2.text = "RULES"
