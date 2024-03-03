@@ -8,7 +8,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate , UITextViewDe
     var note = UITextView()                                                                // Oluşturulan değişkenler
     let baslikLabel2 = UILabel()
     
-
+    
     
     
     override func viewDidLoad() {
@@ -37,6 +37,16 @@ class SecondViewController: UIViewController, UITextFieldDelegate , UITextViewDe
         note.layer.shadowColor = UIColor.black.cgColor
         self.view.addSubview(note)
         note.translatesAutoresizingMaskIntoConstraints = false
+        note.delegate = self
+        
+        NSLayoutConstraint.activate([
+            note.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 150),
+            note.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            note.widthAnchor.constraint(equalToConstant: 300),
+            note.heightAnchor.constraint(equalToConstant: 200)
+        ])
+        
+        
         
         
         /// Button Settings------
@@ -48,6 +58,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate , UITextViewDe
         saveButton.layer.cornerRadius = 10
         saveButton.translatesAutoresizingMaskIntoConstraints = false                        // Düzgün çalışması için yapılan bir method
         self.view.addSubview(saveButton)
+        saveButton.addTarget(self, action: didTapButton, for: touchUpInside)
         NSLayoutConstraint.activate([
             saveButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 650),  // güvenli düzen oluşturma adına safeAreaLayoutGuide
             saveButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -57,26 +68,14 @@ class SecondViewController: UIViewController, UITextFieldDelegate , UITextViewDe
         
         
         /*
-          BU KISIM TEXTFİEL İÇİN YAZILDI
+         BU KISIM TEXTFİEL İÇİN YAZILDI
          let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))      // Padding oluşturup ona view yani bir görünüm veriyoruz.
          note.leftView = leftPaddingView                                                     // Oluşturduğumuz padding için konumu sol tarafa çekiyoruz.
          note.leftViewMode = .always                                                         // Görünümün hep orda oluşması
          */
-    
         
-    
-        NSLayoutConstraint.activate([
-            note.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 150),
-            note.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            note.widthAnchor.constraint(equalToConstant: 300),
-            note.heightAnchor.constraint(equalToConstant: 200)
-        ])
-        
-        note.delegate = self
         
     }
-    
-    
     
     // Büyüme animasyon ekleniyor.
     func textViewDidBeginEditing(_ textView: UITextView){
@@ -95,9 +94,21 @@ class SecondViewController: UIViewController, UITextFieldDelegate , UITextViewDe
             note.text = "WHO WİLL KİLL BE"
             note.textColor = UIColor.systemGray5
         }
-           UIView.animate(withDuration: 1.0, animations: {
-               textView.transform = CGAffineTransform.identity    // Normal boyua geri dönüş.
-           })
-       }
+        UIView.animate(withDuration: 1.0, animations: {
+            textView.transform = CGAffineTransform.identity    // Normal boyua geri dönüş.
+        })
+    }
     
-   }
+    @objc func didTabButton(){
+        guard let text = note.text , !text.isEmpty else {  // Gurad let ile çözümleme işlemi olmassa kod bloğunu terk etmesi adına oluşturduk.
+            return // Return ise işlem olmassa yani metin boş ise işlem sona ersin diye kullanıldı.
+        }
+                   // Metni CoreData ya kaydetme fonksiyonu
+        saveTextToCoreData(text:text)
+    }
+    
+    func saveTextToCoreData(text : String) {
+        
+    }
+    
+}

@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         addButton.addTarget(self, action: #selector(didTapButton) , for: .touchUpInside) //Self: kendisine işlem atandı actions #selector: Target yapımında @object func'dan tanım için kullanırız.
         
         title = "Home"                                                                   //NavigationsController'ın button adı. 
-        navigationController?.navigationBar.tintColor = .systemGray4                     //Burda navigationContoller'ın oluşturduğu butonun rengini değiştirdi.
+        navigationController?.navigationBar.tintColor = .systemRed                     //Burda navigationContoller'ın oluşturduğu butonun rengini değiştirdi.
         
         /// ADD TO VİEW-------------
         self.view.addSubview(baslikLabel)
