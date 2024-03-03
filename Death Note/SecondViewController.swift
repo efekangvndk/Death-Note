@@ -103,12 +103,22 @@ class SecondViewController: UIViewController, UITextFieldDelegate , UITextViewDe
         guard let text = note.text , !text.isEmpty else {  // Gurad let ile çözümleme işlemi olmassa kod bloğunu terk etmesi adına oluşturduk.
             return // Return ise işlem olmassa yani metin boş ise işlem sona ersin diye kullanıldı.
         }
-                   // Metni CoreData ya kaydetme fonksiyonu
+        
+        // Metni CoreData ya kaydetme fonksiyonu
         saveTextToCoreData(text:text)
-    }
-    
-    func saveTextToCoreData(text : String) {
         
     }
+    
+    
+    func saveTextToCoreData(text : String) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext            // CoreData için kullanılması gereken persistentContainer yönetmeliği sağlar.
+        let entity = NSEntityDescription.entity(forEntityName: "saves", in: managedContext)!
+        let record = NSManagedObject(entity: entity, insertInto: managedContext)
+        record.setValue(text, forKeyPath: "saves")
+    }
+    // Do try Catch yapılcak galiba...
     
 }
