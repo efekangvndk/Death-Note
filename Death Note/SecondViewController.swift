@@ -81,7 +81,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate , UITextViewDe
     func textViewDidBeginEditing(_ textView: UITextView){
         if note.textColor == UIColor.systemGray5 {
             note.text = nil
-            note.textColor = UIColor.gray
+            note.textColor = UIColor.black
         }
         UIView.animate(withDuration: 1.2, animations: {
             textView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
