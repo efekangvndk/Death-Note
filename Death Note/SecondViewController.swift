@@ -47,8 +47,6 @@ class SecondViewController: UIViewController, UITextFieldDelegate , UITextViewDe
         ])
         
         
-        
-        
         /// Button Settings------
         let saveButton = UIButton(type: .system)
         saveButton.setTitle("SAVE", for: .normal)
@@ -58,23 +56,13 @@ class SecondViewController: UIViewController, UITextFieldDelegate , UITextViewDe
         saveButton.layer.cornerRadius = 10
         saveButton.translatesAutoresizingMaskIntoConstraints = false                        // Düzgün çalışması için yapılan bir method
         self.view.addSubview(saveButton)
-        saveButton.addTarget(self, action: didTapButton, for: touchUpInside)
+        saveButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         NSLayoutConstraint.activate([
             saveButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 650),  // güvenli düzen oluşturma adına safeAreaLayoutGuide
             saveButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             saveButton.heightAnchor.constraint(equalToConstant: 50),
             saveButton.widthAnchor.constraint(equalToConstant: 100)
         ])
-        
-        
-        /*
-         BU KISIM TEXTFİEL İÇİN YAZILDI
-         let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))      // Padding oluşturup ona view yani bir görünüm veriyoruz.
-         note.leftView = leftPaddingView                                                     // Oluşturduğumuz padding için konumu sol tarafa çekiyoruz.
-         note.leftViewMode = .always                                                         // Görünümün hep orda oluşması
-         */
-        
-        
     }
     
     // Büyüme animasyon ekleniyor.
@@ -99,26 +87,33 @@ class SecondViewController: UIViewController, UITextFieldDelegate , UITextViewDe
         })
     }
     
-    @objc func didTabButton(){
-        guard let text = note.text , !text.isEmpty else {  // Gurad let ile çözümleme işlemi olmassa kod bloğunu terk etmesi adına oluşturduk.
-            return // Return ise işlem olmassa yani metin boş ise işlem sona ersin diye kullanıldı.
+    @objc func didTapButton() {
+        guard let text = note.text, !text.isEmpty else {
+            return
         }
         
-        // Metni CoreData ya kaydetme fonksiyonu
-        saveTextToCoreData(text:text)
-        
+        saveTextToCoreData(text: text)
     }
     
     
-    func saveTextToCoreData(text : String) {
+    func saveTextToCoreData(text: String) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            
+            return
         }
-        let managedContext = appDelegate.persistentContainer.viewContext            // CoreData için kullanılması gereken persistentContainer yönetmeliği sağlar.
-        let entity = NSEntityDescription.entity(forEntityName: "saves", in: managedContext)!
-        let record = NSManagedObject(entity: entity, insertInto: managedContext)
-        record.setValue(text, forKeyPath: "saves")
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        guard let entity = NSEntityDescription.entity(forEntityName: "Note", in: managedContext) else {
+            return
+        }
+        
+        let noteObject = NSManagedObject(entity: entity, insertInto: managedContext)
+        noteObject.setValue(text, forKey: "text")
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
     }
-    // Do try Catch yapılcak galiba...
-    
 }
