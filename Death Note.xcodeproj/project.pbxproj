@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		AB9E0BA42B728D68009C10E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E0BA32B728D68009C10E2 /* AppDelegate.swift */; };
 		AB9E0BA62B728D68009C10E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E0BA52B728D68009C10E2 /* SceneDelegate.swift */; };
-		AB9E0BA82B728D68009C10E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E0BA72B728D68009C10E2 /* ViewController.swift */; };
+		AB9E0BA82B728D68009C10E2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E0BA72B728D68009C10E2 /* HomeViewController.swift */; };
 		AB9E0BAE2B728D68009C10E2 /* Death_Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB9E0BAC2B728D68009C10E2 /* Death_Note.xcdatamodeld */; };
 		AB9E0BB02B728D69009C10E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB9E0BAF2B728D69009C10E2 /* Assets.xcassets */; };
 		AB9E0BB32B728D69009C10E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB9E0BB12B728D69009C10E2 /* LaunchScreen.storyboard */; };
+		ABDD5D7F2BA77BB5009C633C /* UIComponentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDD5D7E2BA77BB5009C633C /* UIComponentHelper.swift */; };
+		ABDD5D812BA77C4E009C633C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDD5D802BA77C4E009C633C /* HomeView.swift */; };
 		ABF847822B75D4BE00BF1C92 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF847812B75D4BD00BF1C92 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +22,13 @@
 		AB9E0BA02B728D68009C10E2 /* Death Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Death Note.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9E0BA32B728D68009C10E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB9E0BA52B728D68009C10E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB9E0BA72B728D68009C10E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB9E0BA72B728D68009C10E2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AB9E0BAD2B728D68009C10E2 /* Death_Note.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Death_Note.xcdatamodel; sourceTree = "<group>"; };
 		AB9E0BAF2B728D69009C10E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB9E0BB22B728D69009C10E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB9E0BB42B728D69009C10E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABDD5D7E2BA77BB5009C633C /* UIComponentHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponentHelper.swift; sourceTree = "<group>"; };
+		ABDD5D802BA77C4E009C633C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		ABF847812B75D4BD00BF1C92 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,14 +62,64 @@
 		AB9E0BA22B728D68009C10E2 /* Death Note */ = {
 			isa = PBXGroup;
 			children = (
-				AB9E0BA72B728D68009C10E2 /* ViewController.swift */,
-				ABF847812B75D4BD00BF1C92 /* SecondViewController.swift */,
+				ABDD5D7D2BA77BA1009C633C /* Helpers */,
+				ABDD5D7C2BA77B3D009C633C /* Models */,
+				ABDD5D7B2BA77B2F009C633C /* Views */,
+				ABDD5D7A2BA77B28009C633C /* Controllers */,
 				ABE696C22B7517E30024FD15 /* Supporting  */,
 				AB9E0BB12B728D69009C10E2 /* LaunchScreen.storyboard */,
 				AB9E0BB42B728D69009C10E2 /* Info.plist */,
 				AB9E0BAC2B728D68009C10E2 /* Death_Note.xcdatamodeld */,
 			);
 			path = "Death Note";
+			sourceTree = "<group>";
+		};
+		ABDD5D7A2BA77B28009C633C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ABDD5D822BA7803F009C633C /* Home */,
+				ABF847812B75D4BD00BF1C92 /* SecondViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ABDD5D7B2BA77B2F009C633C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ABDD5D832BA7804B009C633C /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ABDD5D7C2BA77B3D009C633C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ABDD5D7D2BA77BA1009C633C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ABDD5D7E2BA77BB5009C633C /* UIComponentHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		ABDD5D822BA7803F009C633C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AB9E0BA72B728D68009C10E2 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		ABDD5D832BA7804B009C633C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ABDD5D802BA77C4E009C633C /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		ABE696C22B7517E30024FD15 /* Supporting  */ = {
@@ -148,9 +202,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB9E0BA82B728D68009C10E2 /* ViewController.swift in Sources */,
+				AB9E0BA82B728D68009C10E2 /* HomeViewController.swift in Sources */,
+				ABDD5D812BA77C4E009C633C /* HomeView.swift in Sources */,
 				AB9E0BA42B728D68009C10E2 /* AppDelegate.swift in Sources */,
 				AB9E0BAE2B728D68009C10E2 /* Death_Note.xcdatamodeld in Sources */,
+				ABDD5D7F2BA77BB5009C633C /* UIComponentHelper.swift in Sources */,
 				ABF847822B75D4BE00BF1C92 /* SecondViewController.swift in Sources */,
 				AB9E0BA62B728D68009C10E2 /* SceneDelegate.swift in Sources */,
 			);

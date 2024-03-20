@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)     // Burda Main storyBoardı sildikden sora bir ekran yaratıyoruz.
-        window.rootViewController = UINavigationController(rootViewController: ViewController())
+        window.rootViewController = UINavigationController(rootViewController: HomeViewController())
         self.window = window                                // Bir işlemin sonuda nokte "." olması o parametrenin bir özellik biçimi veya onun yönetim biçimi atanmasını söyler.
         window.makeKeyAndVisible()                          //  Burda Sistem için oluşturulan ekranı görünür kılıyoruz.
     }
