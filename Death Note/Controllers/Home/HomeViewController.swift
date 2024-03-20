@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
     @objc func didTapButton() {
         let secVC = SecondViewController()                                               //Burda #selector için çağırlması gereken func'ı oluşturduk.
         navigationController?.pushViewController(secVC, animated: true)                  //navigationController : Bu terim pageler arası kontrol için gerekli üst button olumunu yapar.
-                                                                                         //pushViewController : BU ifade adından da anlaşılacağı gibi diğer sayfaya atmaya sebep olan kod dizimidir.
+                                                                                         //pushViewController : BU ifade adından da anlaşılacağı gibi diğer sdpsayfaya atmaya sebep olan kod dizimidir.
        
     }
     

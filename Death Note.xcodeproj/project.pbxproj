@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB7306D42BAA6BEA0071E07F /* BebasNeue-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AB7306D12BAA6BEA0071E07F /* BebasNeue-Regular.otf */; };
+		AB7306D52BAA6BEA0071E07F /* Playful Present.otf in Resources */ = {isa = PBXBuildFile; fileRef = AB7306D22BAA6BEA0071E07F /* Playful Present.otf */; };
+		AB7306D62BAA6BEA0071E07F /* The Valentine.otf in Resources */ = {isa = PBXBuildFile; fileRef = AB7306D32BAA6BEA0071E07F /* The Valentine.otf */; };
 		AB9E0BA42B728D68009C10E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E0BA32B728D68009C10E2 /* AppDelegate.swift */; };
 		AB9E0BA62B728D68009C10E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E0BA52B728D68009C10E2 /* SceneDelegate.swift */; };
 		AB9E0BA82B728D68009C10E2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E0BA72B728D68009C10E2 /* HomeViewController.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB7306D12BAA6BEA0071E07F /* BebasNeue-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.otf"; sourceTree = SOURCE_ROOT; };
+		AB7306D22BAA6BEA0071E07F /* Playful Present.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Playful Present.otf"; sourceTree = SOURCE_ROOT; };
+		AB7306D32BAA6BEA0071E07F /* The Valentine.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The Valentine.otf"; sourceTree = SOURCE_ROOT; };
 		AB9E0BA02B728D68009C10E2 /* Death Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Death Note.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9E0BA32B728D68009C10E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB9E0BA52B728D68009C10E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +49,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB7306CF2BAA6B750071E07F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AB7306D02BAA6B8E0071E07F /* Fonts */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		AB7306D02BAA6B8E0071E07F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AB7306D12BAA6BEA0071E07F /* BebasNeue-Regular.otf */,
+				AB7306D22BAA6BEA0071E07F /* Playful Present.otf */,
+				AB7306D32BAA6BEA0071E07F /* The Valentine.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		AB9E0B972B728D68009C10E2 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +86,7 @@
 		AB9E0BA22B728D68009C10E2 /* Death Note */ = {
 			isa = PBXGroup;
 			children = (
+				AB7306CF2BAA6B750071E07F /* Assets */,
 				ABDD5D7D2BA77BA1009C633C /* Helpers */,
 				ABDD5D7C2BA77B3D009C633C /* Models */,
 				ABDD5D7B2BA77B2F009C633C /* Views */,
@@ -190,8 +215,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB7306D52BAA6BEA0071E07F /* Playful Present.otf in Resources */,
 				AB9E0BB32B728D69009C10E2 /* LaunchScreen.storyboard in Resources */,
+				AB7306D62BAA6BEA0071E07F /* The Valentine.otf in Resources */,
 				AB9E0BB02B728D69009C10E2 /* Assets.xcassets in Resources */,
+				AB7306D42BAA6BEA0071E07F /* BebasNeue-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

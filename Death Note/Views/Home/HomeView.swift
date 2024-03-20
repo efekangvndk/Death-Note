@@ -9,8 +9,8 @@ import UIKit
 
 class HomeView: UIView {
     
-    let title = UIComponentsHelper.createCustomLabel(text: "Death Note", size: 15, labelBackGroundColor: .red, textColor: .white, fontName: "Poppins-Regular")
-    let addButton = UIButton()
+    let title = UIComponentsHelper.createCustomLabel(text: "The Note", size: 50 , labelBackGroundColor: .red , textColor: .white, fontName: "The Valentine", cornerRadius: 10 , borderWidth: 2, borderColor: UIColor.yellow.cgColor)
+    let addbutton = UIComponentsHelper.creatCustomButton(ButtonName: "Take a note", tintColor: .red , image: , cornerRadius: 20, borderWidth: <#T##CGFloat#>, borderColor: <#T##CGColor#>, backgroundColor: <#T##UIColor#>)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,6 +23,7 @@ class HomeView: UIView {
     
     private func setupView()  {
         addSubview(title)
+        addSubview(addbutton)
         constraintSettings()
         backgroundColor = .darkGray
         
@@ -30,9 +31,9 @@ class HomeView: UIView {
     
     private func constraintSettings() {
         NSLayoutConstraint.activate([
-            title.widthAnchor.constraint(equalToConstant: 100),
+            title.topAnchor.constraint(equalTo: topAnchor,constant: 100),
+            title.widthAnchor.constraint(equalToConstant: 120),
             title.heightAnchor.constraint(equalToConstant: 50),
-            title.centerYAnchor.constraint(equalTo: centerYAnchor),
             title.centerXAnchor.constraint(equalTo: centerXAnchor),
         ])
     }
