@@ -66,16 +66,6 @@ class SecondViewController: UIViewController, UITextFieldDelegate , UITextViewDe
             saveButton.heightAnchor.constraint(equalToConstant: 50),
             saveButton.widthAnchor.constraint(equalToConstant: 100)
         ])
-        
-        
-        /*
-         BU KISIM TEXTFİEL İÇİN YAZILDI
-         let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))      // Padding oluşturup ona view yani bir görünüm veriyoruz.
-         note.leftView = leftPaddingView                                                     // Oluşturduğumuz padding için konumu sol tarafa çekiyoruz.
-         note.leftViewMode = .always                                                         // Görünümün hep orda oluşması
-         */
-        
-        
     }
     
     // Büyüme animasyon ekleniyor.
@@ -126,6 +116,3 @@ class SecondViewController: UIViewController, UITextFieldDelegate , UITextViewDe
     
 }
 
-#Preview(body: {
-    HomeViewController()
-})

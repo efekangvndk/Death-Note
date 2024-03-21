@@ -7,6 +7,12 @@
 
 import UIKit
 
+class ButtonHelper {
+    static func buttonTarget(to button : UIButton, target : Any , action : Selector){
+        button.addTarget(target, action: action, for: .touchUpInside)
+    }
+    
+}
 struct UIComponentsHelper {
     static func createCustomLabel(text : String , size :CGFloat, labelBackGroundColor : UIColor , textColor : UIColor , fontName : String , cornerRadius : CGFloat, borderWidth : CGFloat, borderColor : CGColor ,addshadow : Bool) -> UILabel {
         let label = UILabel()
@@ -49,3 +55,4 @@ struct UIComponentsHelper {
             return button
     }
 }
+
