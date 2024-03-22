@@ -4,7 +4,6 @@
 //
 //  Created by Efekan Güvendik on 6.02.2024.
 
-///Buton işlevi diğer sayfa, coredata ya safe ve collections view .
 
 import UIKit
 import SwiftUI
@@ -12,15 +11,21 @@ import SwiftUI
 class HomeViewController: UIViewController {
     
     private var homeView = HomeView()
-    let addbutton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         homeView = HomeView(frame: view.bounds)
         view.addSubview(homeView)
+       setupController()
+    }
+    private func setupController() {
         title = "Home"
         navigationController?.navigationBar.tintColor = .systemRed
+        homeView.addbutton.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
     }
+    
+   
+    
 }
 
 

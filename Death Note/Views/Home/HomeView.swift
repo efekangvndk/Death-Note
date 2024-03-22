@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class HomeView: UIView {
     
@@ -26,8 +27,7 @@ class HomeView: UIView {
         addSubview(addbutton)
         constraintSettings()
         backgroundColor = .darkGray
-        ButtonHelper.buttonTarget(to: addbutton, target: self, action: #selector(addButtonTapped))
-        addbutton.isUserInteractionEnabled = true
+        
     }
     
     private func constraintSettings() {
@@ -41,10 +41,6 @@ class HomeView: UIView {
             addbutton.widthAnchor.constraint(equalToConstant: 120),
             addbutton.heightAnchor.constraint(equalToConstant: 30),
         ])
-    }
-    
-    @objc func addButtonTapped(){
-        print("tapped")
     }
     
 }
