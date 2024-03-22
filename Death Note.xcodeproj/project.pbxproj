@@ -21,7 +21,6 @@
 		AB9EBC7F2BACBB7700FAA4FE /* UIView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9EBC7E2BACBB7700FAA4FE /* UIView + Ext.swift */; };
 		ABDD5D7F2BA77BB5009C633C /* UIComponentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDD5D7E2BA77BB5009C633C /* UIComponentHelper.swift */; };
 		ABDD5D812BA77C4E009C633C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDD5D802BA77C4E009C633C /* HomeView.swift */; };
-		ABF847822B75D4BE00BF1C92 /* NoteViewContoller2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF847812B75D4BD00BF1C92 /* NoteViewContoller2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +40,6 @@
 		AB9EBC7E2BACBB7700FAA4FE /* UIView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Ext.swift"; sourceTree = "<group>"; };
 		ABDD5D7E2BA77BB5009C633C /* UIComponentHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponentHelper.swift; sourceTree = "<group>"; };
 		ABDD5D802BA77C4E009C633C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		ABF847812B75D4BD00BF1C92 /* NoteViewContoller2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewContoller2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +116,6 @@
 		AB9EBC7C2BACA49A00FAA4FE /* NotesViewController */ = {
 			isa = PBXGroup;
 			children = (
-				ABF847812B75D4BD00BF1C92 /* NoteViewContoller2.swift */,
 				AB82BDCD2BAD003500C01145 /* NotesViewController.swift */,
 			);
 			path = NotesViewController;
@@ -270,7 +267,6 @@
 				AB9EBC7F2BACBB7700FAA4FE /* UIView + Ext.swift in Sources */,
 				ABDD5D7F2BA77BB5009C633C /* UIComponentHelper.swift in Sources */,
 				AB82BDCE2BAD003500C01145 /* NotesViewController.swift in Sources */,
-				ABF847822B75D4BE00BF1C92 /* NoteViewContoller2.swift in Sources */,
 				AB9E0BA62B728D68009C10E2 /* SceneDelegate.swift in Sources */,
 				AB9EBC7A2BACA3B300FAA4FE /* NotesView.swift in Sources */,
 			);

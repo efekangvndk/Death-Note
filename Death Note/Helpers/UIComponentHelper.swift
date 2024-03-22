@@ -49,5 +49,20 @@ struct UIComponentsHelper {
         }
             return button
     }
+    static func creatCustomTextField(text : String?, size : CGFloat , fontName : String , cornerRadius : CGFloat, borderWidth : CGFloat , borderColor : CGColor, placeholder : String
+                                     ,textColor : UIColor,textBackGroundColor : UIColor) -> UITextField{
+        let textField = UITextField()
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.text = text
+        textField.font = UIFont(name: fontName , size: size)
+        textField.layer.cornerRadius = cornerRadius
+        textField.layer.borderWidth = borderWidth
+        textField.layer.borderColor = borderColor
+        textField.textColor = textColor
+        textField.backgroundColor = textBackGroundColor
+        textField.placeholder = placeholder
+        textField.textAlignment = .center
+       return textField
+    }
 }
 

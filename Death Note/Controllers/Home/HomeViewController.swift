@@ -21,10 +21,13 @@ class HomeViewController: UIViewController {
     private func setupController() {
         title = "Home"
         navigationController?.navigationBar.tintColor = .systemRed
-        homeView.addbutton.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
+        homeView.addbutton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
+    }
+    @objc func addButtonTapped(){
+        let VC = NotesViewController()
+        navigationController?.pushViewController(VC, animated: true)
     }
     
-   
     
 }
 

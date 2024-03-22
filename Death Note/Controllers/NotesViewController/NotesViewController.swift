@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 import SwiftUI
 
-class NotesViewController : UICollectionViewController{
+class NotesViewController : UIViewController{
     
     var notesView = NotesView()
     
@@ -20,5 +20,7 @@ class NotesViewController : UICollectionViewController{
     func setupController() {
         notesView = NotesView(frame: view.bounds)       //    Ekranın tanımladık ve tam ölçeklendirdik. 
         self.view.addSubview(notesView)
+        
+        
     }
 }
