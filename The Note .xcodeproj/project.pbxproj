@@ -28,7 +28,7 @@
 		AB7306D22BAA6BEA0071E07F /* Playful Present.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Playful Present.otf"; sourceTree = SOURCE_ROOT; };
 		AB7306D32BAA6BEA0071E07F /* The Valentine.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The Valentine.otf"; sourceTree = SOURCE_ROOT; };
 		AB82BDCD2BAD003500C01145 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
-		AB9E0BA02B728D68009C10E2 /* Death Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Death Note.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB9E0BA02B728D68009C10E2 /* The Note .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Note .app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9E0BA32B728D68009C10E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB9E0BA52B728D68009C10E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AB9E0BA72B728D68009C10E2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		AB9E0B972B728D68009C10E2 = {
 			isa = PBXGroup;
 			children = (
-				AB9E0BA22B728D68009C10E2 /* Death Note */,
+				AB9E0BA22B728D68009C10E2 /* The Note */,
 				AB9E0BA12B728D68009C10E2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,12 +83,12 @@
 		AB9E0BA12B728D68009C10E2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AB9E0BA02B728D68009C10E2 /* Death Note.app */,
+				AB9E0BA02B728D68009C10E2 /* The Note .app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AB9E0BA22B728D68009C10E2 /* Death Note */ = {
+		AB9E0BA22B728D68009C10E2 /* The Note */ = {
 			isa = PBXGroup;
 			children = (
 				AB9EBC7D2BACBB6900FAA4FE /* Extensions */,
@@ -102,7 +102,7 @@
 				AB9E0BB42B728D69009C10E2 /* Info.plist */,
 				AB9E0BAC2B728D68009C10E2 /* Death_Note.xcdatamodeld */,
 			);
-			path = "Death Note";
+			path = "The Note";
 			sourceTree = "<group>";
 		};
 		AB9EBC782BACA39C00FAA4FE /* NotesView */ = {
@@ -190,9 +190,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AB9E0B9F2B728D68009C10E2 /* Death Note */ = {
+		AB9E0B9F2B728D68009C10E2 /* The Note  */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB9E0BB72B728D69009C10E2 /* Build configuration list for PBXNativeTarget "Death Note" */;
+			buildConfigurationList = AB9E0BB72B728D69009C10E2 /* Build configuration list for PBXNativeTarget "The Note " */;
 			buildPhases = (
 				AB9E0B9C2B728D68009C10E2 /* Sources */,
 				AB9E0B9D2B728D68009C10E2 /* Frameworks */,
@@ -202,9 +202,9 @@
 			);
 			dependencies = (
 			);
-			name = "Death Note";
+			name = "The Note ";
 			productName = "Death Note";
-			productReference = AB9E0BA02B728D68009C10E2 /* Death Note.app */;
+			productReference = AB9E0BA02B728D68009C10E2 /* The Note .app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -222,7 +222,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AB9E0B9B2B728D68009C10E2 /* Build configuration list for PBXProject "Death Note" */;
+			buildConfigurationList = AB9E0B9B2B728D68009C10E2 /* Build configuration list for PBXProject "The Note " */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -235,7 +235,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AB9E0B9F2B728D68009C10E2 /* Death Note */,
+				AB9E0B9F2B728D68009C10E2 /* The Note  */,
 			);
 		};
 /* End PBXProject section */
@@ -414,7 +414,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NVHXX3267W;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Death Note/Info.plist";
+				INFOPLIST_FILE = "The Note/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -441,7 +441,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NVHXX3267W;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Death Note/Info.plist";
+				INFOPLIST_FILE = "The Note/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -462,7 +462,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AB9E0B9B2B728D68009C10E2 /* Build configuration list for PBXProject "Death Note" */ = {
+		AB9E0B9B2B728D68009C10E2 /* Build configuration list for PBXProject "The Note " */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AB9E0BB52B728D69009C10E2 /* Debug */,
@@ -471,7 +471,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB9E0BB72B728D69009C10E2 /* Build configuration list for PBXNativeTarget "Death Note" */ = {
+		AB9E0BB72B728D69009C10E2 /* Build configuration list for PBXNativeTarget "The Note " */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AB9E0BB82B728D69009C10E2 /* Debug */,
