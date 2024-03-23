@@ -113,12 +113,12 @@
 			path = NotesView;
 			sourceTree = "<group>";
 		};
-		AB9EBC7C2BACA49A00FAA4FE /* NotesViewController */ = {
+		AB9EBC7C2BACA49A00FAA4FE /* NotesController */ = {
 			isa = PBXGroup;
 			children = (
 				AB82BDCD2BAD003500C01145 /* NotesViewController.swift */,
 			);
-			path = NotesViewController;
+			path = NotesController;
 			sourceTree = "<group>";
 		};
 		AB9EBC7D2BACBB6900FAA4FE /* Extensions */ = {
@@ -132,8 +132,8 @@
 		ABDD5D7A2BA77B28009C633C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AB9EBC7C2BACA49A00FAA4FE /* NotesViewController */,
-				ABDD5D822BA7803F009C633C /* Home */,
+				AB9EBC7C2BACA49A00FAA4FE /* NotesController */,
+				ABDD5D822BA7803F009C633C /* HomeController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -162,12 +162,12 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		ABDD5D822BA7803F009C633C /* Home */ = {
+		ABDD5D822BA7803F009C633C /* HomeController */ = {
 			isa = PBXGroup;
 			children = (
 				AB9E0BA72B728D68009C10E2 /* HomeViewController.swift */,
 			);
-			path = Home;
+			path = HomeController;
 			sourceTree = "<group>";
 		};
 		ABDD5D832BA7804B009C633C /* Home */ = {

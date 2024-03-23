@@ -11,16 +11,15 @@ import SwiftUI
 
 class NotesViewController : UIViewController{
     
-    var notesView = NotesView()
+   private var notesView = NotesView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupController()
     }
     
     func setupController() {
-        notesView = NotesView(frame: view.bounds)       //    Ekranın tanımladık ve tam ölçeklendirdik. 
+        notesView = NotesView(frame: view.bounds)       //    Ekranın tanımladık ve tam ölçeklendirdik.
         self.view.addSubview(notesView)
-        
-        
     }
 }
