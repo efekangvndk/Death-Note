@@ -9,6 +9,18 @@ import UIKit
 
 
 struct UIComponentsHelper {
+    
+    static func creatCustomTextView(textColor : UIColor , fontName : String , size : CGFloat , cornerRadius : CGFloat ,borderWidth : CGFloat  )-> UITextView{
+        let textView = UITextView()
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.textColor = textColor
+        textView.font = UIFont(name: fontName, size: size)
+        textView.layer.cornerRadius = cornerRadius
+        textView.layer.borderWidth = borderWidth
+        textView.textAlignment = .center
+    return textView
+    }
+    
     static func createCustomLabel(text : String , size :CGFloat, labelBackGroundColor : UIColor , textColor : UIColor , fontName : String , cornerRadius : CGFloat, borderWidth : CGFloat, borderColor : CGColor ,addshadow : Bool) -> UILabel {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -20,7 +32,7 @@ struct UIComponentsHelper {
         label.backgroundColor = labelBackGroundColor
         label.textAlignment = .center
         label.textColor = textColor
-        label.numberOfLines = 2
+        label.numberOfLines = 0
         label.clipsToBounds = true
         if addshadow {
             label.layer.shadowColor = UIColor.black.cgColor
