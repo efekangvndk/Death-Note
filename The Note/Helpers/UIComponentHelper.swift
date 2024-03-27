@@ -17,7 +17,7 @@ struct UIComponentsHelper {
         textView.font = UIFont(name: fontName, size: size)
         textView.layer.cornerRadius = cornerRadius
         textView.layer.borderWidth = borderWidth
-        textView.textAlignment = .center
+        textView.textAlignment = .left
     return textView
     }
     

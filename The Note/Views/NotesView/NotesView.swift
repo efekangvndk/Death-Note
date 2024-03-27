@@ -11,8 +11,8 @@ import SwiftUI
 
 class NotesView: UIView{
 
-    let noteTextView = UIComponentsHelper.creatCustomTextView(textColor: .black, fontName: "The Valentine", size: 10,  cornerRadius: 10, borderWidth: 2)
-    let titleLabel = UIComponentsHelper.createCustomLabel(text: "Take A Note", size: 10, labelBackGroundColor: UIColor(red: 184/255, green: 140/255, blue: 140/255, alpha: 1.0), textColor: .black, fontName: "The Valentine", cornerRadius: 10, borderWidth: 3, borderColor: UIColor.black.cgColor, addshadow: false)
+    let noteTextView = UIComponentsHelper.creatCustomTextView(textColor: .black, fontName: "The Valentine", size: 1000,  cornerRadius: 10, borderWidth: 2)
+    let titleLabel = UIComponentsHelper.createCustomLabel(text: "Take A Note", size: 10, labelBackGroundColor: UIColor(red: 184/255, green: 140/255, blue: 140/255, alpha: 1.0), textColor: .black, fontName: "Themundayfreeversion-Regular", cornerRadius: 20, borderWidth: 3, borderColor: UIColor.black.cgColor, addshadow: false)
     let saveButton = UIComponentsHelper.creatCustomButton(ButtonName: "Save", tintColor: .black, image: nil, cornerRadius: 10, borderWidth: 2, borderColor: UIColor.yellow.cgColor, backgroundColor: .lightGray, addshadow: true)
     
     override init(frame: CGRect) {

@@ -18,7 +18,7 @@
 		AB9EBC7F2BACBB7700FAA4FE /* UIView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9EBC7E2BACBB7700FAA4FE /* UIView + Ext.swift */; };
 		ABDD5D7F2BA77BB5009C633C /* UIComponentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDD5D7E2BA77BB5009C633C /* UIComponentHelper.swift */; };
 		ABDD5D812BA77C4E009C633C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDD5D802BA77C4E009C633C /* HomeView.swift */; };
-		ABFE2CF42BB3C08400B612C4 /* The Valentine.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABFE2CF32BB3C08400B612C4 /* The Valentine.otf */; };
+		ABFE2CF62BB3D80500B612C4 /* Themundayfreeversion-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABFE2CF52BB3D80500B612C4 /* Themundayfreeversion-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		AB9EBC7E2BACBB7700FAA4FE /* UIView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Ext.swift"; sourceTree = "<group>"; };
 		ABDD5D7E2BA77BB5009C633C /* UIComponentHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponentHelper.swift; sourceTree = "<group>"; };
 		ABDD5D802BA77C4E009C633C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		ABFE2CF32BB3C08400B612C4 /* The Valentine.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The Valentine.otf"; sourceTree = "<group>"; };
+		ABFE2CF52BB3D80500B612C4 /* Themundayfreeversion-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Themundayfreeversion-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 		AB7306D02BAA6B8E0071E07F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				ABFE2CF32BB3C08400B612C4 /* The Valentine.otf */,
+				ABFE2CF52BB3D80500B612C4 /* Themundayfreeversion-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -239,9 +239,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABFE2CF62BB3D80500B612C4 /* Themundayfreeversion-Regular.ttf in Resources */,
 				AB9E0BB32B728D69009C10E2 /* LaunchScreen.storyboard in Resources */,
 				AB9E0BB02B728D69009C10E2 /* Assets.xcassets in Resources */,
-				ABFE2CF42BB3C08400B612C4 /* The Valentine.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
