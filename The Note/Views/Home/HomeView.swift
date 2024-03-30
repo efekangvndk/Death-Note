@@ -32,8 +32,8 @@ class HomeView: UIView , UITabBarDelegate{
         constraintSettings()
         tableView.layer.borderWidth = 2
         tableView.layer.cornerRadius = 20
-        tableView.layer.borderColor = UIColor.yellow.cgColor
-        backgroundColor = .darkGray
+        tableView.layer.borderColor = UIColor.blue.cgColor
+        backgroundColor = .white
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
     }
