@@ -52,7 +52,9 @@ class HomeView: UIView , UITabBarDelegate{
             tableView.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 20),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100)
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100),
+            tableView.leftAnchor.constraint(equalTo: leftAnchor,constant: 0),
+            tableView.rightAnchor.constraint(equalTo: rightAnchor, constant: 0)
         ])
         // addbutton constraints
         NSLayoutConstraint.activate([
