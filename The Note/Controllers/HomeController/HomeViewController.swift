@@ -7,8 +7,9 @@
 
 import UIKit
 import SwiftUI
+import CoreData
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
     private var homeView = HomeView()
     
@@ -16,14 +17,28 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         homeView = HomeView(frame: view.bounds)
         view.addSubview(homeView)
-       setupController()
+        setupController()
     }
     private func setupController() {
         title = "Home"
         navigationController?.navigationBar.tintColor = .systemRed
         homeView.addbutton.addTarget(self, action: #selector(addButtonDown), for: .touchDown)
         homeView.addbutton.addTarget(self, action: #selector(addButtonUp), for: [.touchUpInside , .touchUpOutside])
+        homeView.tableView.delegate = self
+        homeView.tableView.dataSource = self
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = "test"
+        return cell
+    }
+    
     @objc func addButtonDown(){
         UIView.animate(withDuration: 0.2 ){
             self.homeView.addbutton.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)

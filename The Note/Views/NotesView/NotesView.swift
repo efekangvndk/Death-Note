@@ -11,10 +11,10 @@ import CoreData
 
 
 class NotesView: UIView{
-
     let noteTextView = UIComponentsHelper.creatCustomTextView(textColor: .black, fontName: "Themundayfreeversion-Regular", size: 20,  cornerRadius: 10, borderWidth: 2)
     let titleLabel = UIComponentsHelper.createCustomLabel(text: "Take A Note", size: 25, labelBackGroundColor: UIColor(red: 184/255, green: 140/255, blue: 140/255, alpha: 1.0), textColor: .black, fontName: "Themundayfreeversion-Regular", cornerRadius: 20, borderWidth: 3, borderColor: UIColor.black.cgColor, addshadow: false)
     let saveButton = UIComponentsHelper.creatCustomButton(ButtonName: "Save", tintColor: .black, image: nil, cornerRadius: 10, borderWidth: 2, borderColor: UIColor.yellow.cgColor, backgroundColor: .lightGray, addshadow: true, fontName: "Themundayfreeversion-Regular" )
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)

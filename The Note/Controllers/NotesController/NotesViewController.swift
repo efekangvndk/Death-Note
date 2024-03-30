@@ -19,7 +19,7 @@ class NotesViewController : UIViewController{
     }
     
     func setupController() {
-        notesView = NotesView(frame: view.bounds)       //    Ekranın tanımladık ve tam ölçeklendirdik.
+        notesView = NotesView(frame: view.bounds)       // Ekranın tanımladık ve tam ölçeklendirdik.
         notesView.saveButton.addTarget(self, action: #selector(didTapButtonForSave), for: .touchUpInside)
         self.view.addSubview(notesView)
     }
