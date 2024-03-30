@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB53B9FF2BB7E122001EDF28 /* CoreDateSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB53B9FE2BB7E122001EDF28 /* CoreDateSave.swift */; };
 		AB82BDCE2BAD003500C01145 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB82BDCD2BAD003500C01145 /* NotesViewController.swift */; };
 		AB9E0BA42B728D68009C10E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E0BA32B728D68009C10E2 /* AppDelegate.swift */; };
 		AB9E0BA62B728D68009C10E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E0BA52B728D68009C10E2 /* SceneDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB53B9FE2BB7E122001EDF28 /* CoreDateSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDateSave.swift; sourceTree = "<group>"; };
 		AB82BDCD2BAD003500C01145 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		AB9E0BA02B728D68009C10E2 /* The Note .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Note .app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9E0BA32B728D68009C10E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		ABDD5D7C2BA77B3D009C633C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AB53B9FE2BB7E122001EDF28 /* CoreDateSave.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				ABDD5D812BA77C4E009C633C /* HomeView.swift in Sources */,
 				AB9E0BA42B728D68009C10E2 /* AppDelegate.swift in Sources */,
 				AB9E0BAE2B728D68009C10E2 /* Death_Note.xcdatamodeld in Sources */,
+				AB53B9FF2BB7E122001EDF28 /* CoreDateSave.swift in Sources */,
 				AB9EBC7F2BACBB7700FAA4FE /* UIView + Ext.swift in Sources */,
 				ABDD5D7F2BA77BB5009C633C /* UIComponentHelper.swift in Sources */,
 				AB82BDCE2BAD003500C01145 /* NotesViewController.swift in Sources */,
