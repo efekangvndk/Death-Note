@@ -42,11 +42,12 @@ struct UIComponentsHelper {
         }
         return label
     }
-    static func creatCustomButton(ButtonName : String , tintColor : UIColor, image : UIImage? , cornerRadius : CGFloat , borderWidth : CGFloat,borderColor : CGColor,backgroundColor : UIColor, addshadow : Bool)-> UIButton{
+    static func creatCustomButton(ButtonName : String , tintColor : UIColor, image : UIImage? , cornerRadius : CGFloat , borderWidth : CGFloat,borderColor : CGColor,backgroundColor : UIColor, addshadow : Bool, fontName: String )-> UIButton{
             let button = UIButton()
             button.translatesAutoresizingMaskIntoConstraints = false
             button.setTitle(ButtonName , for: .normal)
-            button.setTitleColor(tintColor, for: .normal) 
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+            button.setTitleColor(tintColor, for: .normal)
             button.setImage(image, for: .normal)
             button.layer.cornerRadius = cornerRadius
             button.layer.borderWidth = borderWidth
