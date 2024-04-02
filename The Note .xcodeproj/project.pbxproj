@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB1CDBC72BBC7B5E000671B5 /* CoreDataSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1CDBC62BBC7B5E000671B5 /* CoreDataSave.swift */; };
 		AB53B9FF2BB7E122001EDF28 /* CoreDateSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB53B9FE2BB7E122001EDF28 /* CoreDateSave.swift */; };
 		AB82BDCE2BAD003500C01145 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB82BDCD2BAD003500C01145 /* NotesViewController.swift */; };
 		AB9E0BA42B728D68009C10E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E0BA32B728D68009C10E2 /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB1CDBC62BBC7B5E000671B5 /* CoreDataSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSave.swift; sourceTree = "<group>"; };
 		AB53B9FE2BB7E122001EDF28 /* CoreDateSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDateSave.swift; sourceTree = "<group>"; };
 		AB82BDCD2BAD003500C01145 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		AB9E0BA02B728D68009C10E2 /* The Note .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Note .app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB1CDBC52BBC7B49000671B5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AB1CDBC62BBC7B5E000671B5 /* CoreDataSave.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		AB7306CF2BAA6B750071E07F /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +138,7 @@
 		ABDD5D7A2BA77B28009C633C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AB1CDBC52BBC7B49000671B5 /* CoreData */,
 				AB9EBC7C2BACA49A00FAA4FE /* NotesController */,
 				ABDD5D822BA7803F009C633C /* HomeController */,
 			);
@@ -259,6 +270,7 @@
 				ABDD5D812BA77C4E009C633C /* HomeView.swift in Sources */,
 				AB9E0BA42B728D68009C10E2 /* AppDelegate.swift in Sources */,
 				AB9E0BAE2B728D68009C10E2 /* Death_Note.xcdatamodeld in Sources */,
+				AB1CDBC72BBC7B5E000671B5 /* CoreDataSave.swift in Sources */,
 				AB53B9FF2BB7E122001EDF28 /* CoreDateSave.swift in Sources */,
 				AB9EBC7F2BACBB7700FAA4FE /* UIView + Ext.swift in Sources */,
 				ABDD5D7F2BA77BB5009C633C /* UIComponentHelper.swift in Sources */,
