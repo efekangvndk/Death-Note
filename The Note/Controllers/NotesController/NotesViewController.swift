@@ -18,10 +18,8 @@ class NotesViewController : UIViewController{
         super.viewDidLoad()
         setupController()
     }
+  
     
-    override func viewDidAppear(_ animated: Bool) {
-        NotificationCenter.default.addObserver(self, selector: #selector(getData), name: NSNotification.Name(rawValue:"NewText"), object: nil)
-    }
     
     func setupController() {
         notesView = NotesView(frame: view.bounds)       // Ekranın tanımladık ve tam ölçeklendirdik.

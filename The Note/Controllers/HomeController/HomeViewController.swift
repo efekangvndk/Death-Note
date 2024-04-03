@@ -30,8 +30,9 @@ class HomeViewController: UIViewController , UITableViewDelegate, UITableViewDat
         
     }
     
-    
-    
+    override func viewDidAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(getData), name: NSNotification.Name(rawValue:"NewText"), object: nil)
+    }
     
    @objc func getData(){
         

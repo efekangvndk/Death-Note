@@ -62,11 +62,10 @@ struct UIComponentsHelper {
         }
             return button
     }
-    static func creatCustomTextField(text : String?, size : CGFloat , fontName : String , cornerRadius : CGFloat, borderWidth : CGFloat , borderColor : CGColor, placeholder : String
+    static func creatCustomTextField( size : CGFloat , fontName : String , cornerRadius : CGFloat, borderWidth : CGFloat , borderColor : CGColor, placeholder : String
                                      ,textColor : UIColor,textBackGroundColor : UIColor) -> UITextField{
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.text = text
         textField.font = UIFont(name: fontName , size: size)
         textField.layer.cornerRadius = cornerRadius
         textField.layer.borderWidth = borderWidth
