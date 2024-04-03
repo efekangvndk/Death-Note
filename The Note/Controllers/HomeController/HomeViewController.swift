@@ -11,7 +11,7 @@ import CoreData
 
 class HomeViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
-     var homeViewController = HomeView()
+    var homeViewController = HomeView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,25 +27,47 @@ class HomeViewController: UIViewController , UITableViewDelegate, UITableViewDat
         homeViewController.tableView.delegate = self
         homeViewController.tableView.dataSource = self
         getData()
-    }
-    ///
-    ///
-    ///
-    ///
-    ///
-
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return homeViewController.nots.count
         
     }
     
+    
+    
+    
+   @objc func getData(){
+        
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        let context = appDelegate?.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Nots")
+        fetchRequest.returnsObjectsAsFaults = false
+        
+        do {
+            if let context = context{
+                let results = try context.fetch(fetchRequest)
+                for result in results as! [NSManagedObject]{
+                    if let nots = result.value(forKey: "nots") as? String{
+                        homeViewController.nots.append(nots)
+                    }
+                }
+            }else{
+                print("Error")
+            }
+            homeViewController.tableView.reloadData()
+        }catch{
+            print("Error")
+        }
+      
+    }
+    
+    
+    // MARK: Animasyon ve çağırma, gitme gibi işlemler.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return homeViewController.nots.count
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.textLabel?.text = homeViewController.nots[indexPath.row]
         return cell
     }
-    
     @objc func addButtonDown(){
         UIView.animate(withDuration: 0.2 ){
             self.homeViewController.addbutton.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)

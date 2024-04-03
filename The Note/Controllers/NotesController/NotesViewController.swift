@@ -12,10 +12,15 @@ import SwiftUI
 class NotesViewController : UIViewController{
     
     private var notesView = NotesView()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupController()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(getData), name: NSNotification.Name(rawValue:"NewText"), object: nil)
     }
     
     func setupController() {
@@ -39,5 +44,7 @@ class NotesViewController : UIViewController{
         } else {
             print("Entity bulunamadı")
         }
+        NotificationCenter.default.post(name: NSNotification.Name("NewText"), object: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 }
