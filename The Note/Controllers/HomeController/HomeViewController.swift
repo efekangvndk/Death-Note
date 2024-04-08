@@ -1,93 +1,104 @@
-//
-//  ViewController.swift
-//  Death Note
-//
-//  Created by Efekan Güvendik on 6.02.2024.
-
-
 import UIKit
-import SwiftUI
 import CoreData
 
-class HomeViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var homeViewController = HomeView()
+    var homeControllerView: HomeView!
+    var nots: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        homeViewController = HomeView(frame: view.bounds)
-        view.addSubview(homeViewController)
+        homeControllerView = HomeView(frame: view.bounds)
+        view.addSubview(homeControllerView)
         setupController()
+        getData()
     }
+    
     private func setupController() {
         title = "Home"
         navigationController?.navigationBar.tintColor = .systemRed
-        homeViewController.addbutton.addTarget(self, action: #selector(addButtonDown), for: .touchDown)
-        homeViewController.addbutton.addTarget(self, action: #selector(addButtonUp), for: [.touchUpInside , .touchUpOutside])
-        homeViewController.tableView.delegate = self
-        homeViewController.tableView.dataSource = self
+        homeControllerView.addbutton.addTarget(self, action: #selector(addButtonDown), for: .touchDown)
+        homeControllerView.addbutton.addTarget(self, action: #selector(addButtonUp), for: [.touchUpInside , .touchUpOutside])
+        homeControllerView.tableView.delegate = self
+        homeControllerView.tableView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         getData()
-        
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        NotificationCenter.default.addObserver(self, selector: #selector(getData), name: NSNotification.Name(rawValue:"NewText"), object: nil)
-    }
-    
-   @objc func getData(){
+     // MARK: Save işlemleri. Ve veri çekme ile animasyon.
+    @objc func getData() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            print("Error: Couldn't get AppDelegate")
+            return
+        }
         
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        let context = appDelegate?.persistentContainer.viewContext
+        let context = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Nots")
         fetchRequest.returnsObjectsAsFaults = false
         
         do {
-            if let context = context{
-                let results = try context.fetch(fetchRequest)
-                for result in results as! [NSManagedObject]{
-                    if let nots = result.value(forKey: "nots") as? String{
-                        homeViewController.nots.append(nots)
-                    }
+            let results = try context.fetch(fetchRequest)
+            nots = []
+            for result in results as! [NSManagedObject] {
+                if let not = result.value(forKey: "nots") as? String {
+                    nots.append(not)
                 }
-            }else{
-                print("Error")
             }
-            homeViewController.tableView.reloadData()
-        }catch{
-            print("Error")
+            homeControllerView.tableView.reloadData()
+        } catch {
+            print("Error fetching data: \(error)")
         }
-      
     }
     
-    
-    // MARK: Animasyon ve çağırma, gitme gibi işlemler.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return homeViewController.nots.count
+        return nots.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = homeViewController.nots[indexPath.row]
+        cell.textLabel?.text = nots[indexPath.row]
         return cell
     }
-    @objc func addButtonDown(){
-        UIView.animate(withDuration: 0.2 ){
-            self.homeViewController.addbutton.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+    
+    @objc func addButtonDown() {
+        UIView.animate(withDuration: 0.2) {
+            self.homeControllerView.addbutton.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
         }
-        homeViewController.addbutton.alpha = 0.5
-        homeViewController.addbutton.backgroundColor = UIColor.black
+        homeControllerView.addbutton.alpha = 0.5
+        homeControllerView.addbutton.backgroundColor = .black
     }
+    
     @objc func addButtonUp() {
         UIView.animate(withDuration: 0.2) {
-            self.homeViewController.addbutton.transform = CGAffineTransform.identity
+            self.homeControllerView.addbutton.transform = CGAffineTransform.identity
         }
-        homeViewController.addbutton.alpha = 1.0
-        homeViewController.addbutton.backgroundColor = UIColor.red
+        homeControllerView.addbutton.alpha = 1.0
+        homeControllerView.addbutton.backgroundColor = .red
         let VC = NotesViewController()
         navigationController?.pushViewController(VC, animated: true)
     }
     
-    
+    // MARK: Silme işlemleri.
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{ // kaydırarak silme işlemi. 
+            let appDelegate = UIApplication.shared.delegate as? AppDelegate
+            let context = appDelegate?.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Nots")
+           
+            do{
+                let result = try context?.fetch(fetchRequest)
+                if let object = result as?[NSManagedObject]{
+                    let objectToDelete = object[indexPath.row]
+                    context?.delete(objectToDelete)
+                    try context?.save()
+                    nots.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
+            }catch{
+                print("Error deleting item : \(error)")
+            }
+        }
+    }
 }
-
-
-
