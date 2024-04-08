@@ -42,6 +42,20 @@ class NotesViewController : UIViewController{
         } else {
             print("Entity bulunamadı")
         }
+        if let entityTitle = NSEntityDescription.entity(forEntityName: "Nots", in: managedContext){
+            let titleNoteView = NSManagedObject(entity: entityTitle, insertInto: managedContext)
+            titleNoteView.setValue(notesView.noteTextField, forKey: "title")
+            do{
+                
+                try managedContext.save() // Kodu Save işlemi yapmak için unwrap yapıda do try cath ile save işlemi yapılıyor.
+                print("save successful")
+            }catch let error as NSError{
+                print("Save Failed \(error), \(error.userInfo)")
+            }
+        } else {
+            print("Entity bulunamadı")
+        }
+        
         NotificationCenter.default.post(name: NSNotification.Name("NewText"), object: nil)
         self.navigationController?.popViewController(animated: true)
     }

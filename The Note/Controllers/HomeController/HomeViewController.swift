@@ -4,7 +4,7 @@ import CoreData
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var homeControllerView: HomeView!
-    var nots: [String] = []
+    var titleNoteView: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +40,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         do {
             let results = try context.fetch(fetchRequest)
-            nots = []
+            titleNoteView = []
             for result in results as! [NSManagedObject] {
                 if let not = result.value(forKey: "nots") as? String {
-                    nots.append(not)
+                    titleNoteView.append(not)
                 }
             }
             homeControllerView.tableView.reloadData()
@@ -53,12 +53,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return nots.count
+        return titleNoteView.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = nots[indexPath.row]
+        cell.textLabel?.text = titleNoteView[indexPath.row]
         return cell
     }
     
@@ -82,7 +82,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // MARK: Silme işlemleri.
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete{ // kaydırarak silme işlemi. 
+        if editingStyle == .delete{ // kaydırarak silme işlemi. y
             let appDelegate = UIApplication.shared.delegate as? AppDelegate
             let context = appDelegate?.persistentContainer.viewContext
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Nots")
@@ -93,7 +93,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let objectToDelete = object[indexPath.row]
                     context?.delete(objectToDelete)
                     try context?.save()
-                    nots.remove(at: indexPath.row)
+                    titleNoteView.remove(at: indexPath.row)
                     tableView.deleteRows(at: [indexPath], with: .fade)
                 }
             }catch{
