@@ -9,12 +9,20 @@ import SwiftUI
 import UIKit
 import CoreData
 
-class EdithScreenView : UIView{
+class EdithView : UIView{
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
     }
+    
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+        
     }
+    
+    
+    
 }

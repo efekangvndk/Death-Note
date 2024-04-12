@@ -18,7 +18,6 @@ class NotesViewController : UIViewController{
         super.viewDidLoad()
         setupController()
     }
-  
     
     
     func setupController() {
