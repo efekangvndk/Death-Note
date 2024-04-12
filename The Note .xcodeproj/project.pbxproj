@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AB53B9FF2BB7E122001EDF28 /* CoreDateSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB53B9FE2BB7E122001EDF28 /* CoreDateSave.swift */; };
+		AB7EDF782BC9D1000096A29A /* EdithScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7EDF772BC9D1000096A29A /* EdithScreenController.swift */; };
+		AB7EDF7B2BC9D3550096A29A /* EdithScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7EDF7A2BC9D3550096A29A /* EdithScreenView.swift */; };
 		AB82BDCE2BAD003500C01145 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB82BDCD2BAD003500C01145 /* NotesViewController.swift */; };
 		AB9E0BA42B728D68009C10E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E0BA32B728D68009C10E2 /* AppDelegate.swift */; };
 		AB9E0BA62B728D68009C10E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E0BA52B728D68009C10E2 /* SceneDelegate.swift */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		AB53B9FE2BB7E122001EDF28 /* CoreDateSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDateSave.swift; sourceTree = "<group>"; };
+		AB7EDF772BC9D1000096A29A /* EdithScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdithScreenController.swift; sourceTree = "<group>"; };
+		AB7EDF7A2BC9D3550096A29A /* EdithScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdithScreenView.swift; sourceTree = "<group>"; };
 		AB82BDCD2BAD003500C01145 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		AB9E0BA02B728D68009C10E2 /* The Note .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Note .app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9E0BA32B728D68009C10E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,22 @@
 				ABFE2CF52BB3D80500B612C4 /* Themundayfreeversion-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AB7EDF732BC9D0820096A29A /* EdithScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AB7EDF7A2BC9D3550096A29A /* EdithScreenView.swift */,
+			);
+			path = EdithScreen;
+			sourceTree = "<group>";
+		};
+		AB7EDF762BC9D0F00096A29A /* EdithScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AB7EDF772BC9D1000096A29A /* EdithScreenController.swift */,
+			);
+			path = EdithScreen;
 			sourceTree = "<group>";
 		};
 		AB9E0B972B728D68009C10E2 = {
@@ -128,6 +148,7 @@
 		ABDD5D7A2BA77B28009C633C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AB7EDF762BC9D0F00096A29A /* EdithScreen */,
 				AB9EBC7C2BACA49A00FAA4FE /* NotesController */,
 				ABDD5D822BA7803F009C633C /* HomeController */,
 			);
@@ -137,6 +158,7 @@
 		ABDD5D7B2BA77B2F009C633C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AB7EDF732BC9D0820096A29A /* EdithScreen */,
 				AB9EBC782BACA39C00FAA4FE /* NotesView */,
 				ABDD5D832BA7804B009C633C /* Home */,
 			);
@@ -257,12 +279,14 @@
 			files = (
 				AB9E0BA82B728D68009C10E2 /* HomeViewController.swift in Sources */,
 				ABDD5D812BA77C4E009C633C /* HomeView.swift in Sources */,
+				AB7EDF782BC9D1000096A29A /* EdithScreenController.swift in Sources */,
 				AB9E0BA42B728D68009C10E2 /* AppDelegate.swift in Sources */,
 				AB9E0BAE2B728D68009C10E2 /* Death_Note.xcdatamodeld in Sources */,
 				AB53B9FF2BB7E122001EDF28 /* CoreDateSave.swift in Sources */,
 				AB9EBC7F2BACBB7700FAA4FE /* UIView + Ext.swift in Sources */,
 				ABDD5D7F2BA77BB5009C633C /* UIComponentHelper.swift in Sources */,
 				AB82BDCE2BAD003500C01145 /* NotesViewController.swift in Sources */,
+				AB7EDF7B2BC9D3550096A29A /* EdithScreenView.swift in Sources */,
 				AB9E0BA62B728D68009C10E2 /* SceneDelegate.swift in Sources */,
 				AB9EBC7A2BACA3B300FAA4FE /* NotesView.swift in Sources */,
 			);

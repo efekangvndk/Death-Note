@@ -27,6 +27,29 @@ class NotesViewController : UIViewController{
         self.view.addSubview(notesView)
     }
     @objc func didTapButtonForSave(){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let managedContext = appDelegate.persistentContainer.viewContext
+
+        if let entity = NSEntityDescription.entity(forEntityName: "Nots", in: managedContext) {
+            let note = NSManagedObject(entity: entity, insertInto: managedContext)
+            note.setValue(notesView.noteTextField.text, forKey: "title")
+            note.setValue(notesView.noteTextView.text, forKey: "nots")
+
+            do {
+                try managedContext.save()
+                print("save successful")
+            } catch let error as NSError {
+                print("Save Failed \(error), \(error.userInfo)")
+            }
+        } else {
+            print("Entity bulunamadı")
+        }
+        
+        NotificationCenter.default.post(name: NSNotification.Name("NewDataSaved"), object: nil)
+        self.navigationController?.popViewController(animated: true)
+    }
+
+   /* @objc func didTapButtonForSave(){
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return}
         let managedContext = appDelegate.persistentContainer.viewContext
         if let entity = NSEntityDescription.entity(forEntityName: "Nots", in: managedContext){
@@ -58,5 +81,5 @@ class NotesViewController : UIViewController{
         
         NotificationCenter.default.post(name: NSNotification.Name("NewText"), object: nil)
         self.navigationController?.popViewController(animated: true)
-    }
+    }*/
 }
