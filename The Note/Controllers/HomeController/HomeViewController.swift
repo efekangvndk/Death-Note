@@ -42,8 +42,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             let results = try context.fetch(fetchRequest)
             titleNoteView = []
             for result in results as! [NSManagedObject] {
-                if let not = result.value(forKey: "nots") as? String {
-                    titleNoteView.append(not)
+                if let cellTitle = result.value(forKey: "title") as? String {
+                    titleNoteView.append(cellTitle)
                 }
             }
             homeControllerView.tableView.reloadData()
