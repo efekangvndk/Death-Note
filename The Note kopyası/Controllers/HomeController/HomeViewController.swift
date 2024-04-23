@@ -6,6 +6,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var homeControllerView: HomeView!
     var titleNoteView: [String] = []
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         homeControllerView = HomeView(frame: view.bounds)
@@ -44,6 +45,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             for result in results as! [NSManagedObject] {
                 if let cellTitle = result.value(forKey: "title") as? String {
                     titleNoteView.append(cellTitle)
+                    print(titleNoteView)
+
                 }
             }
             homeControllerView.tableView.reloadData()
