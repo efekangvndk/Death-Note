@@ -1,7 +1,7 @@
 import UIKit
 import CoreData
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     var homeControllerView: HomeView!
     var titleNoteView: [String] = []
@@ -62,7 +62,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.textLabel?.text = titleNoteView[indexPath.row]
+        
+        
+        // MARK: TableView Edith Button işlemleri.
+        let edithButton = UIButton(type: .system)
+        edithButton.setTitle("+", for: .highlighted)
+        edithButton.tintColor = UIColor.black
+        edithButton.addTarget(self, action: #selector(editButtonTapped(_:)), for: .touchUpInside)
+        cell.accessoryView = edithButton
         return cell
+    }
+    
+    @objc func editButtonTapped(_ sender: UIButton) {
+        let edithVC = EdithViewController()
+        navigationController?.pushViewController(edithVC, animated: true)
+        print("edit button Tapped")
     }
     
     @objc func addButtonDown() {
