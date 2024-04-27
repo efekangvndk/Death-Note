@@ -13,8 +13,8 @@ class HomeView: UIView , UITabBarDelegate{
     var nots = [String]()
     
     var tableView = UITableView()
-    let title = UIComponentsHelper.createCustomLabel(text: "The Note", size: 10 , labelBackGroundColor: .red , textColor: .white, fontName: "The-Valentine", cornerRadius: 10 , borderWidth: 2, borderColor: UIColor.yellow.cgColor, addshadow: false)
-    var addbutton = UIComponentsHelper.creatCustomButton(ButtonName: "Take a note", tintColor: .white , image: nil , cornerRadius: 5, borderWidth: 2, borderColor: UIColor.yellow.cgColor , backgroundColor: .red, addshadow: true, fontName: "Themundayfreeversion-Regular")
+    let title = UIComponentsHelper.createCustomLabel(text: "The Note", size: 10 , labelBackGroundColor: .red , textColor: .white, fontName: "The-Valentine", cornerRadius: 10 , borderWidth: 2, borderColor: UIColor.yellow.cgColor, addShadow: false)
+    var addbutton = UIComponentsHelper.creatCustomButton(buttonName: "Take a note", tintColor: .white , image: nil, image2: nil , cornerRadius: 5, borderWidth: 2, borderColor: UIColor.yellow.cgColor , backgroundColor: .red, addShadow: true, fontName: "Themundayfreeversion-Regular", imageSize: nil)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
