@@ -14,7 +14,7 @@ class EdithView : UIView{
     var saveimage = UIImage?.self
     
     let edithTextField = UIComponentsHelper.creatCustomTextView(textColor: .black, fontName: "Themundayfreeversion-Regular", size: 20, cornerRadius: 10 , borderWidth: 2 )
-    let edithSaveButton = UIComponentsHelper.creatCustomButton(buttonName: "", tintColor: .black, image: nil, image2: UIImage(named: "saveimage"), cornerRadius: nil, borderWidth: nil, borderColor: UIColor.black.cgColor, backgroundColor: nil, addShadow: false, fontName: "Themundayfreeversion-Regular", imageSize: CGSize(width: 200, height: 200))
+    let edithSaveButton = UIComponentsHelper.creatCustomButton(buttonName: "", tintColor: .black, image: nil, image2: UIImage(named: "saveimage"), cornerRadius: nil, borderWidth: nil, borderColor: UIColor.black.cgColor, backgroundColor: nil, addShadow: false, fontName: "Themundayfreeversion-Regular", imageSize: CGSize(width: 200, height: 180))
 
     override init(frame: CGRect) {
         super.init(frame: frame)
