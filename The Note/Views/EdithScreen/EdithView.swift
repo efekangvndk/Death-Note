@@ -49,8 +49,8 @@ class EdithView : UIView{
             edithSaveButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             edithSaveButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
             // Görselin boyutuna göre genişlik ve yükseklik belirleme
-            edithSaveButton.widthAnchor.constraint(equalToConstant: edithSaveButton.imageView?.image?.size.width ?? 200),
-            edithSaveButton.heightAnchor.constraint(equalToConstant: edithSaveButton.imageView?.image?.size.height ?? 200)
+            edithSaveButton.widthAnchor.constraint(equalToConstant: edithSaveButton.imageView?.image?.size.width ?? 1),
+            edithSaveButton.heightAnchor.constraint(equalToConstant: edithSaveButton.imageView?.image?.size.height ?? 1)
         ])
     }
 
