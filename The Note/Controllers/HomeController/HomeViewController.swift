@@ -28,7 +28,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewWillAppear(animated)
         getData()
     }
-     // MARK: Save işlemleri. Ve veri çekme ile animasyon.
+    // MARK: Save işlemleri. Ve veri çekme ile animasyon.
     @objc func getData() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             print("Error: Couldn't get AppDelegate")
@@ -56,7 +56,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         let note = titleNoteView[indexPath.row]
         cell.textLabel?.text = note.value(forKey: "title") as? String
-
+        
         // Hücreye buton eklemek
         let editButton = UIButton(type: .system)
         editButton.setTitle("+", for: .normal)
@@ -65,10 +65,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         editButton.addTarget(self, action: #selector(editButtonTapped(_:)), for: .touchUpInside)
         editButton.frame = CGRect(x: cell.frame.width - 10, y: 5, width: 60, height: 34)
         cell.contentView.addSubview(editButton)
-
+        
         return cell
     }
-
+    
     
     @objc func editButtonTapped(_ sender: UIButton) {
         let edithVC = EdithViewController()
@@ -100,7 +100,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             let appDelegate = UIApplication.shared.delegate as? AppDelegate
             let context = appDelegate?.persistentContainer.viewContext
             let objectToDelete = titleNoteView[indexPath.row]
-           
+            
             do{
                 context?.delete(objectToDelete)
                 try context?.save()

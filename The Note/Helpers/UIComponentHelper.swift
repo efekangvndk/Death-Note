@@ -10,13 +10,13 @@ import UIKit
 
 struct UIComponentsHelper {
     
-    static func creatCustomTextView(textColor : UIColor , fontName : String , size : CGFloat , cornerRadius : CGFloat ,borderWidth : CGFloat  )-> UITextView{
+    static func creatCustomTextView(textColor : UIColor , fontName : String , size : CGFloat , cornerRadius : CGFloat?  ,borderWidth : CGFloat? )-> UITextView{
         let textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.textColor = textColor
         textView.font = UIFont(name: fontName, size: size)
-        textView.layer.cornerRadius = cornerRadius
-        textView.layer.borderWidth = borderWidth
+        textView.layer.cornerRadius = cornerRadius ?? 0
+        textView.layer.borderWidth = borderWidth ?? 0
         textView.textAlignment = .left
     return textView
     }
