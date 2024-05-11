@@ -12,8 +12,8 @@ import CoreData
 
 class NotesView: UIView{
     
-    let noteTextField = UIComponentsHelper.creatCustomTextField(size: 30, fontName: "Themundayfreeversion-Regular", cornerRadius: 20, borderWidth: 2, borderColor: UIColor.black.cgColor, placeholder: "Title", textColor: .black, textBackGroundColor: .white)
-    let noteTextView = UIComponentsHelper.creatCustomTextView(textColor: .black, fontName: "Themundayfreeversion-Regular", size: 20,  cornerRadius: 10, borderWidth: 2)
+    var noteTextField = UIComponentsHelper.creatCustomTextField(size: 30, fontName: "Themundayfreeversion-Regular", cornerRadius: 20, borderWidth: 2, borderColor: UIColor.black.cgColor, placeholder: "Title", textColor: .black, textBackGroundColor: .white)
+    var noteTextView = UIComponentsHelper.creatCustomTextView(textColor: .black, fontName: "Themundayfreeversion-Regular", size: 20,  cornerRadius: 10, borderWidth: 2)
     let titleLabel = UIComponentsHelper.createCustomLabel(text: "Take A Note", size: 25, labelBackGroundColor: UIColor(red: 184/255, green: 140/255, blue: 140/255, alpha: 1.0), textColor: .black, fontName: "Themundayfreeversion-Regular", cornerRadius: 20, borderWidth: 3, borderColor: UIColor.black.cgColor, addShadow: false)
     let saveButton = UIComponentsHelper.creatCustomButton(buttonName: "Save", tintColor: .black, image: nil, image2: nil, cornerRadius: 10, borderWidth: 2, borderColor: UIColor.yellow.cgColor, backgroundColor: .lightGray, addShadow: true, fontName: "Themundayfreeversion-Regular", imageSize: nil )
     

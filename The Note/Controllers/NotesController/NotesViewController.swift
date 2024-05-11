@@ -13,13 +13,33 @@ class NotesViewController : UIViewController{
     
     private var notesView = NotesView()
 
+    var chooesingNotes = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupController()
        
+        if chooesingNotes != "" { // Eğer seçilen hücre boş ise veya değilse
+         
+            
+        }
     }
     
+    @objc func getData() {
+        
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        let managedContext = appDelegate?.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Nots")
+        fetchRequest.predicate = NSPredicate(format: "name = %@ ", self.chooesingNotes)
+        fetchRequest.returnsObjectsAsFaults = false
+
+        do {
+            let result =  try managedContext?.fetch(fetchRequest)
+            
+        }catch{
+            
+        }
+    }
     
     func setupController() {
         notesView = NotesView(frame: view.bounds)       // Ekranın tanımladık ve tam ölçeklendirdik.
@@ -29,7 +49,7 @@ class NotesViewController : UIViewController{
     @objc func didTapButtonForSave(){
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
-
+        
         if let entity = NSEntityDescription.entity(forEntityName: "Nots", in: managedContext) {
             let note = NSManagedObject(entity: entity, insertInto: managedContext)
             note.setValue(notesView.noteTextField.text, forKey: "title")
@@ -49,37 +69,5 @@ class NotesViewController : UIViewController{
         self.navigationController?.popViewController(animated: true)
     }
 
-   /* @objc func didTapButtonForSave(){
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return}
-        let managedContext = appDelegate.persistentContainer.viewContext
-        if let entity = NSEntityDescription.entity(forEntityName: "Nots", in: managedContext){
-            let not = NSManagedObject(entity: entity, insertInto: managedContext)
-            not.setValue(notesView.noteTextView.text, forKey: "nots")
-            do{
-                
-                try managedContext.save() // Kodu Save işlemi yapmak için unwrap yapıda do try cath ile save işlemi yapılıyor.
-                print("save successful")
-            }catch let error as NSError{
-                print("Save Failed \(error), \(error.userInfo)")
-            }
-        } else {
-            print("Entity bulunamadı")
-        }
-        if let entityTitle = NSEntityDescription.entity(forEntityName: "Nots", in: managedContext){
-            let titleNoteView = NSManagedObject(entity: entityTitle, insertInto: managedContext)
-            titleNoteView.setValue(notesView.noteTextField.text, forKey: "title")
-            do{
-                
-                try managedContext.save() // Kodu Save işlemi yapmak için unwrap yapıda do try cath ile save işlemi yapılıyor.
-                print("save successful")
-            }catch let error as NSError{
-                print("Save Failed \(error), \(error.userInfo)")
-            }
-        } else {
-            print("Entity bulunamadı")
-        }
-        
-        NotificationCenter.default.post(name: NSNotification.Name("NewText"), object: nil)
-        self.navigationController?.popViewController(animated: true)
-    }*/
+   
 }

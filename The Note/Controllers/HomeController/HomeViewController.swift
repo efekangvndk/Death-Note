@@ -4,8 +4,8 @@ import CoreData
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var homeControllerView: HomeView!
-    var titleNoteView: [NSManagedObject] = []
-    
+    var titleNoteView: [NSManagedObject] = [] // Verilerinizi NSManagedObject dizisi olarak saklayın
+    let showVC = NotesViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewWillAppear(animated)
         getData()
     }
-    // MARK: Save işlemleri. Ve veri çekme ile animasyon.
+    
+    // MARK: - Veri işlemleri
+    
     @objc func getData() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             print("Error: Couldn't get AppDelegate")
@@ -36,12 +38,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         let context = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Nots")
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Nots") // NSManagedObject türü belirtilmeli
         fetchRequest.returnsObjectsAsFaults = false
         
         do {
-            let results = try context.fetch(fetchRequest)
-            titleNoteView = results as! [NSManagedObject]
+            titleNoteView = try context.fetch(fetchRequest) // Verileri doğrudan titleNoteView dizisine atayın
             homeControllerView.tableView.reloadData()
         } catch {
             print("Error fetching data: \(error)")
@@ -65,10 +66,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         editButton.addTarget(self, action: #selector(editButtonTapped(_:)), for: .touchUpInside)
         editButton.frame = CGRect(x: cell.frame.width - 10, y: 5, width: 60, height: 34)
         cell.contentView.addSubview(editButton)
-        
         return cell
     }
-    
     
     @objc func editButtonTapped(_ sender: UIButton) {
         let edithVC = EdithViewController()
@@ -94,25 +93,32 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationController?.pushViewController(VC, animated: true)
     }
     
-    // MARK: Silme işlemleri.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedNote = titleNoteView[indexPath.row]
+        if let title = selectedNote.value(forKey: "title") as? String,
+           let textView = selectedNote.value(forKey: "nots") as? String {
+            showVC.chooesingNotes = title
+            showVC.chooesingNotes = textView
+            navigationController?.pushViewController(showVC, animated: true)
+        }
+    }
+    
+    // MARK: - Silme işlemleri
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete{ // kaydırarak silme işlemi. y
+        if editingStyle == .delete {
             let appDelegate = UIApplication.shared.delegate as? AppDelegate
             let context = appDelegate?.persistentContainer.viewContext
             let objectToDelete = titleNoteView[indexPath.row]
             
-            do{
+            do {
                 context?.delete(objectToDelete)
                 try context?.save()
                 titleNoteView.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .fade)
-            }catch{
+            } catch {
                 print("Error deleting item : \(error)")
             }
         }
     }
 }
-
-
-// MARK:  edith screen yapılacak ve özellikler düzenlenecek...
-

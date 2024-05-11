@@ -11,6 +11,8 @@ import SwiftUI
 
 class EdithViewController : UIViewController{
     
+    var noteTitle : String?
+    var noteText : String?
     
     private var edithScreen = EdithView()
     
